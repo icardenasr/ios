@@ -1,5 +1,6 @@
 # [ownCloud](https://owncloud.org) iOS app
-[![](https://owncloud.org/wp-content/themes/owncloudorgnew/assets/img/clients/buttons/appstore.png)](https://itunes.apple.com/app/owncloud/id543672169)
+
+**Versión del 24/05/2016**
 
 [![](https://s5.mzstatic.com/eu/r30/Purple49/v4/68/9f/75/689f75f8-1524-f121-7503-32f47fe45896/screen322x572.jpeg)](https://itunes.apple.com/app/owncloud/id543672169)[![](https://s4.mzstatic.com/eu/r30/Purple69/v4/82/c5/4b/82c54bd9-9835-cbbd-2eac-20867ef8f7d6/screen322x572.jpeg)](https://itunes.apple.com/app/owncloud/id543672169)
 
