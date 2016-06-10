@@ -10,5 +10,3 @@
 #define ELCConstants_h
 
 #endif /* ELCConstants_h */
-Status API Training Shop Blog About
-
