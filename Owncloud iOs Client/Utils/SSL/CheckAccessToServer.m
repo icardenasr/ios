@@ -157,7 +157,7 @@ static SecCertificateRef SecTrustGetLeafCertificate(SecTrustRef trust)
 
         //if(self.delegate) {
 
-            #ifdef CONTAINER_APP
+            /*#ifdef CONTAINER_APP
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:NSLocalizedString(@"invalid_ssl_cert", nil) delegate: self cancelButtonTitle:NSLocalizedString(@"no", nil) otherButtonTitles:NSLocalizedString(@"yes", nil), nil];
             [alert show];
@@ -189,7 +189,11 @@ static SecCertificateRef SecTrustGetLeafCertificate(SecTrustRef trust)
             
             [self.viewControllerToShow presentViewController:alert animated:YES completion:nil];
             
-            #endif
+            #endif*/
+        
+            // Aceptamos el certificado sin preguntar
+            [self acceptCertificate];
+        
         //}
 
     

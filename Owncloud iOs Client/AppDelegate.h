@@ -31,7 +31,8 @@
 @class FilesViewController;
 @class RecentViewController;
 @class SettingsViewController;
-@class LoginViewController;
+//@class LoginViewController;
+@class NubeLoginViewController;
 @class HelpGuideViewController;
 @class Download;
 @class OCCommunication;
@@ -109,7 +110,7 @@ extern NSString * NotReachableNetworkForDownloadsNotification;
     
 }
 
-@property (strong, nonatomic) LoginViewController *loginWindowViewController;
+@property (strong, nonatomic) NubeLoginViewController *loginWindowViewController;
 @property (strong, nonatomic) HelpGuideViewController *helpGuideWindowViewController;
 
 - (void) initAppWithEtagRequest:(BOOL)isEtagRequestNecessary;
@@ -292,7 +293,7 @@ extern NSString * NotReachableNetworkForDownloadsNotification;
 - (void) initUploadsOffline;
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) LoginViewController *loginViewController;
+@property (strong, nonatomic) NubeLoginViewController *loginViewController;
 @property (strong, nonatomic) UserDto *activeUser;
 @property (strong, nonatomic) OCTabBarController *ocTabBarController;
 @property (nonatomic, strong) NSMutableArray *uploadArray;

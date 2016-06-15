@@ -1,0 +1,15 @@
+FAMILIA: TeX Gyre Heros Cn
+TeXGyreHerosCondensed-Bold
+TeXGyreHerosCondensed-Regular
+TeXGyreHerosCondensed-Italic
+TeXGyreHerosCondensed-BoldItalic
+
+FAMILIA: NewsGotTLig
+NewsGotT-Ligh
+
+FAMILIA: NewsGotT
+NewsGotT-Regu
+NewsGotT-Bold
+
+FAMILIA: NewsGotTMed
+NewsGotT-Medi

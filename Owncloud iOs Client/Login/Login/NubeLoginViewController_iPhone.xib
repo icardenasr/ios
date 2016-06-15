@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NubeLoginViewController">
+            <connections>
+                <outlet property="aiview" destination="bWH-F9-ebn" id="YUd-rO-1bk"/>
+                <outlet property="appNameLabel" destination="Giu-SQ-7Jr" id="D2c-Sj-6QG"/>
+                <outlet property="connectButton" destination="Pe4-Zq-5dw" id="u0Z-IH-jcg"/>
+                <outlet property="passwordTextField" destination="p8S-UC-Ii9" id="RhT-A7-dSr"/>
+                <outlet property="termsButton" destination="oni-KC-fFZ" id="o4a-l6-4g6"/>
+                <outlet property="userTextField" destination="fcm-Wb-kOY" id="byX-aT-7zg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="B3O-DN-ISv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nube-junta-verde.png" translatesAutoresizingMaskIntoConstraints="NO" id="hPc-Je-64v">
+                    <rect key="frame" x="40" y="34" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="VEL-Kl-xmZ"/>
+                        <constraint firstAttribute="width" secondItem="hPc-Je-64v" secondAttribute="height" multiplier="15:8" id="mEK-OQ-5dZ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nube Junta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giu-SQ-7Jr">
+                    <rect key="frame" x="40" y="170" width="240" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Giu-SQ-7Jr" secondAttribute="height" multiplier="164:30" id="XPJ-SL-OfX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcm-Wb-kOY">
+                    <rect key="frame" x="40" y="240" width="240" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-UC-Ii9">
+                    <rect key="frame" x="40" y="285" width="240" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe4-Zq-5dw">
+                    <rect key="frame" x="108" y="330" width="104" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="tintColor" red="0.16702035216992933" green="0.42774460078534027" blue="0.13583135564377893" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="CONECTAR">
+                        <color key="titleColor" red="0.16702035216992933" green="0.42774460078534027" blue="0.13583135564377893" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="connectWithServer:" destination="-1" eventType="touchUpInside" id="lSH-0D-qoF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oni-KC-fFZ">
+                    <rect key="frame" x="40" y="425" width="241" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IwU-mm-cU3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="tintColor" red="0.16702035216992933" green="0.42774460078534027" blue="0.13583135564377893" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="TERMINOS DE USO">
+                        <color key="titleColor" red="0.16702035216992933" green="0.42774460078534027" blue="0.13583135564377893" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showTerms:" destination="-1" eventType="touchUpInside" id="pAF-Bu-yAL"/>
+                    </connections>
+                </button>
+                <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bWH-F9-ebn">
+                    <rect key="frame" x="150" y="381" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="0SM-0s-r5S"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="34" id="0Wt-SW-5eg"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="Pe4-Zq-5dw" secondAttribute="centerX" id="1FT-r1-USZ"/>
+                <constraint firstAttribute="bottom" secondItem="oni-KC-fFZ" secondAttribute="bottom" constant="25" id="2dF-7T-IiO"/>
+                <constraint firstItem="Giu-SQ-7Jr" firstAttribute="top" secondItem="hPc-Je-64v" secondAttribute="bottom" constant="8" id="2e3-a7-8fZ"/>
+                <constraint firstItem="bWH-F9-ebn" firstAttribute="top" secondItem="Pe4-Zq-5dw" secondAttribute="bottom" constant="15" id="4pS-EP-Mbe"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="fcm-Wb-kOY" secondAttribute="leading" id="AXo-SX-bPf"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="Giu-SQ-7Jr" secondAttribute="centerX" id="DmH-Sc-wVN"/>
+                <constraint firstItem="oni-KC-fFZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="E9F-Ce-y6i"/>
+                <constraint firstItem="Giu-SQ-7Jr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="EU9-ZF-0FZ"/>
+                <constraint firstAttribute="trailing" secondItem="Giu-SQ-7Jr" secondAttribute="trailing" constant="40" id="GWC-LW-BUe"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="p8S-UC-Ii9" secondAttribute="leading" id="KTq-db-RkR"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="trailing" secondItem="fcm-Wb-kOY" secondAttribute="trailing" id="O0Y-AQ-1eT"/>
+                <constraint firstItem="fcm-Wb-kOY" firstAttribute="top" secondItem="Giu-SQ-7Jr" secondAttribute="bottom" constant="26" id="XHR-BU-7b1"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="oni-KC-fFZ" secondAttribute="centerX" id="atR-v2-POt"/>
+                <constraint firstAttribute="trailing" secondItem="hPc-Je-64v" secondAttribute="trailing" constant="40" id="btq-xi-ExE"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cJk-RN-bIT"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="trailing" secondItem="p8S-UC-Ii9" secondAttribute="trailing" id="mul-9A-DEG"/>
+                <constraint firstItem="bWH-F9-ebn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="q0M-rH-5J4"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="34" id="u2m-za-R5E"/>
+                <constraint firstItem="p8S-UC-Ii9" firstAttribute="top" secondItem="fcm-Wb-kOY" secondAttribute="bottom" constant="15" id="u3g-dg-IeG"/>
+                <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="vAd-CU-8s8"/>
+                <constraint firstItem="Pe4-Zq-5dw" firstAttribute="top" secondItem="p8S-UC-Ii9" secondAttribute="bottom" constant="15" id="wnx-eg-Ti7"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="265" y="309"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nube-junta-verde.png" width="1017" height="545"/>
+    </resources>
+</document>

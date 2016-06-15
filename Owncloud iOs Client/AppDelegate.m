@@ -19,7 +19,8 @@
 #import "CheckAccessToServer.h"
 #import "DetailViewController.h"
 #import "constants.h"
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
+#import "NubeLoginViewController.h"
 #import "UploadFromOtherAppViewController.h"
 #import "AuthenticationDbService.h"
 #import "RetrieveRefreshAndAccessTokenTask.h"
@@ -170,11 +171,12 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
     [NSURLCache setSharedURLCache:sharedCache];
     sleep(1); //Important sleep. Very ugly but neccesarry.
     
-    DLog(@"showHelp_:%d",[ManageDB getShowHelpGuide]);
+    // DESACTIVAMOS EL MOSTRAR LAS ANIMACIONES DE AYUDA EN EL PRIMER ARRANQUE
+    /*DLog(@"showHelp_:%d",[ManageDB getShowHelpGuide]);
     if (k_show_main_help_guide && [ManageDB getShowHelpGuide] && !_activeUser) {
         self.helpGuideWindowViewController = [HelpGuideViewController new];        
         self.window.rootViewController = self.helpGuideWindowViewController;
-    }
+    }*/
    
     //Show TouchID dialog if active
     if([ManageAppSettingsDB isTouchID])
@@ -183,6 +185,14 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[InstantUpload instantUploadManager] activate];
     });
+    
+    // Truco para sacar por consola el nombre de todos los tipos de fuentes incluidos en la app
+    /*for (NSString* family in [UIFont familyNames]) {
+        NSLog(@"%@", family);
+        for (NSString* name in [UIFont fontNamesForFamilyName: family]) {
+            NSLog(@"  %@", name);
+        }
+    }*/
 
     return YES;
 }
@@ -357,9 +367,9 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         
         if (IS_IPHONE) {
-            self.loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPhone" bundle:nil];
+            self.loginViewController = [[NubeLoginViewController alloc] initWithNibName:@"NubeLoginViewController_iPhone" bundle:nil];
         } else {
-            self.loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPad" bundle:nil];
+            self.loginViewController = [[NubeLoginViewController alloc] initWithNibName:@"NubeLoginViewController_iPad" bundle:nil];
         }
         self.window.rootViewController = self.loginViewController;
         [self.window makeKeyAndVisible];
@@ -390,13 +400,13 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
         
         [self initAppWithEtagRequest:NO];
     } else {
-        self.loginViewController.usernameTextField = [[UITextField alloc] init];
+        /*self.loginViewController.usernameTextField = [[UITextField alloc] init];
         self.loginViewController.usernameTextField.text = @"OAuth";
         
         self.loginViewController.passwordTextField = [[UITextField alloc] init];
         self.loginViewController.passwordTextField.text = self.oauthToken;
         
-        [self.loginViewController goTryToDoLogin];
+        [self.loginViewController goTryToDoLogin];*/
     }
     
 }
@@ -421,9 +431,9 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
     }
     
     if (IS_IPHONE) {
-        _loginWindowViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPhone" bundle:[NSBundle mainBundle]];
+        _loginWindowViewController = [[NubeLoginViewController alloc] initWithNibName:@"NubeLoginViewController_iPhone" bundle:[NSBundle mainBundle]];
     } else {
-        _loginWindowViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPad" bundle:[NSBundle mainBundle]];
+        _loginWindowViewController = [[NubeLoginViewController alloc] initWithNibName:@"NubeLoginViewController_iPad" bundle:[NSBundle mainBundle]];
     }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -2829,9 +2839,9 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
     DLog(@"ShowLoginView");
     
     if (IS_IPHONE) {
-        _loginWindowViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPhone" bundle:[NSBundle mainBundle]];
+        _loginWindowViewController = [[NubeLoginViewController alloc] initWithNibName:@"NubeLoginViewController_iPhone" bundle:[NSBundle mainBundle]];
     } else {
-        _loginWindowViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iPad" bundle:[NSBundle mainBundle]];
+        _loginWindowViewController = [[NubeLoginViewController alloc] initWithNibName:@"NubeLoginViewController_iPad" bundle:[NSBundle mainBundle]];
     }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

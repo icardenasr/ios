@@ -630,6 +630,20 @@
 		9069EAA71CF5F07200810996 /* OCLoadingSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9069EAA61CF5F07200810996 /* OCLoadingSpinner.m */; };
 		90D608FA1C89844E0049CCE4 /* SortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B3D3A1C8867AA00BCC93B /* SortManager.m */; };
 		90D608FC1C8984760049CCE4 /* SortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B3D3A1C8867AA00BCC93B /* SortManager.m */; };
+		A93174FD1D117833001BDBFF /* nube-junta-verde-fake-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = A93174FC1D117833001BDBFF /* nube-junta-verde-fake-splash.png */; };
+		A944FB311D1011710042BEE3 /* nube-junta-verde-nombre.png in Resources */ = {isa = PBXBuildFile; fileRef = A944FB301D1011710042BEE3 /* nube-junta-verde-nombre.png */; };
+		A944FB361D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A944FB351D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib */; };
+		A944FB391D10194B0042BEE3 /* NubeLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A944FB381D10194B0042BEE3 /* NubeLoginViewController.m */; };
+		A944FB441D101D6D0042BEE3 /* NewsGotT.TTF in Resources */ = {isa = PBXBuildFile; fileRef = A944FB3B1D101D6D0042BEE3 /* NewsGotT.TTF */; };
+		A944FB451D101D6D0042BEE3 /* NewsGotTBold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = A944FB3C1D101D6D0042BEE3 /* NewsGotTBold.TTF */; };
+		A944FB461D101D6D0042BEE3 /* NewsGotTDem.TTF in Resources */ = {isa = PBXBuildFile; fileRef = A944FB3D1D101D6D0042BEE3 /* NewsGotTDem.TTF */; };
+		A944FB471D101D6D0042BEE3 /* NewsGotTLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = A944FB3E1D101D6D0042BEE3 /* NewsGotTLight.TTF */; };
+		A944FB481D101D6D0042BEE3 /* NewsGotTMed.TTF in Resources */ = {isa = PBXBuildFile; fileRef = A944FB3F1D101D6D0042BEE3 /* NewsGotTMed.TTF */; };
+		A944FB491D101D6D0042BEE3 /* texgyreheroscn-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A944FB401D101D6D0042BEE3 /* texgyreheroscn-bold.otf */; };
+		A944FB4A1D101D6D0042BEE3 /* texgyreheroscn-bolditalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A944FB411D101D6D0042BEE3 /* texgyreheroscn-bolditalic.otf */; };
+		A944FB4B1D101D6D0042BEE3 /* texgyreheroscn-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A944FB421D101D6D0042BEE3 /* texgyreheroscn-italic.otf */; };
+		A944FB4C1D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A944FB431D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf */; };
+		A9736A0E1D1005AF005BBAE0 /* nube-junta-verde.png in Resources */ = {isa = PBXBuildFile; fileRef = A9736A0D1D1005AF005BBAE0 /* nube-junta-verde.png */; };
 		A99C2DED1D0ADAA500040D9B /* InstantUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C2DEC1D0ADAA500040D9B /* InstantUpload.m */; };
 		A99C2DF71D0ADAFD00040D9B /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C2DF01D0ADAFC00040D9B /* ELCAssetTablePicker.m */; };
 		A99C2DF81D0ADAFD00040D9B /* ELCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C2DF21D0ADAFC00040D9B /* ELCConsole.m */; };
@@ -1642,6 +1656,21 @@
 		906177E31C4FAC0B00BBE648 /* ManageTouchID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageTouchID.h; sourceTree = "<group>"; };
 		9069EAA51CF5F07200810996 /* OCLoadingSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCLoadingSpinner.h; path = Utils/OCLoadingSpinner.h; sourceTree = "<group>"; };
 		9069EAA61CF5F07200810996 /* OCLoadingSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCLoadingSpinner.m; path = Utils/OCLoadingSpinner.m; sourceTree = "<group>"; };
+		A93174FC1D117833001BDBFF /* nube-junta-verde-fake-splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nube-junta-verde-fake-splash.png"; sourceTree = "<group>"; };
+		A944FB301D1011710042BEE3 /* nube-junta-verde-nombre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nube-junta-verde-nombre.png"; sourceTree = "<group>"; };
+		A944FB351D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NubeLoginViewController_iPhone.xib; path = Login/Login/NubeLoginViewController_iPhone.xib; sourceTree = "<group>"; };
+		A944FB371D10194B0042BEE3 /* NubeLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NubeLoginViewController.h; path = Login/Login/NubeLoginViewController.h; sourceTree = "<group>"; };
+		A944FB381D10194B0042BEE3 /* NubeLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NubeLoginViewController.m; path = Login/Login/NubeLoginViewController.m; sourceTree = "<group>"; };
+		A944FB3B1D101D6D0042BEE3 /* NewsGotT.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewsGotT.TTF; sourceTree = "<group>"; };
+		A944FB3C1D101D6D0042BEE3 /* NewsGotTBold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewsGotTBold.TTF; sourceTree = "<group>"; };
+		A944FB3D1D101D6D0042BEE3 /* NewsGotTDem.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewsGotTDem.TTF; sourceTree = "<group>"; };
+		A944FB3E1D101D6D0042BEE3 /* NewsGotTLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewsGotTLight.TTF; sourceTree = "<group>"; };
+		A944FB3F1D101D6D0042BEE3 /* NewsGotTMed.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewsGotTMed.TTF; sourceTree = "<group>"; };
+		A944FB401D101D6D0042BEE3 /* texgyreheroscn-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreheroscn-bold.otf"; sourceTree = "<group>"; };
+		A944FB411D101D6D0042BEE3 /* texgyreheroscn-bolditalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreheroscn-bolditalic.otf"; sourceTree = "<group>"; };
+		A944FB421D101D6D0042BEE3 /* texgyreheroscn-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreheroscn-italic.otf"; sourceTree = "<group>"; };
+		A944FB431D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreheroscn-regular-webfont.ttf"; sourceTree = "<group>"; };
+		A9736A0D1D1005AF005BBAE0 /* nube-junta-verde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nube-junta-verde.png"; sourceTree = "<group>"; };
 		A99C2DEB1D0ADA9E00040D9B /* InstantUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstantUpload.h; sourceTree = "<group>"; };
 		A99C2DEC1D0ADAA500040D9B /* InstantUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstantUpload.m; sourceTree = "<group>"; };
 		A99C2DEE1D0ADAFC00040D9B /* ELCAssetPickerFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELCAssetPickerFilterDelegate.h; path = ExternalLibreries/ELCPickerLib/ELCAssetPickerFilterDelegate.h; sourceTree = "<group>"; };
@@ -2024,6 +2053,15 @@
 		1324298315ADBB3700DF823E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A944FB3B1D101D6D0042BEE3 /* NewsGotT.TTF */,
+				A944FB3C1D101D6D0042BEE3 /* NewsGotTBold.TTF */,
+				A944FB3D1D101D6D0042BEE3 /* NewsGotTDem.TTF */,
+				A944FB3E1D101D6D0042BEE3 /* NewsGotTLight.TTF */,
+				A944FB3F1D101D6D0042BEE3 /* NewsGotTMed.TTF */,
+				A944FB401D101D6D0042BEE3 /* texgyreheroscn-bold.otf */,
+				A944FB411D101D6D0042BEE3 /* texgyreheroscn-bolditalic.otf */,
+				A944FB421D101D6D0042BEE3 /* texgyreheroscn-italic.otf */,
+				A944FB431D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf */,
 				EA421B911B021A0300E4071F /* Accessibility */,
 				1487F15D177C35AA004A1A5A /* Images */,
 				EAF028B3177447530035084D /* FMDB */,
@@ -2378,6 +2416,9 @@
 				1420C3A7178A9F5000C0455C /* LoginViewController_iPhone.xib */,
 				1420C3A8178A9F5000C0455C /* LoginViewController.h */,
 				1420C3A9178A9F5000C0455C /* LoginViewController.m */,
+				A944FB351D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib */,
+				A944FB371D10194B0042BEE3 /* NubeLoginViewController.h */,
+				A944FB381D10194B0042BEE3 /* NubeLoginViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -2575,6 +2616,8 @@
 		1487F1A2177C35AA004A1A5A /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A944FB301D1011710042BEE3 /* nube-junta-verde-nombre.png */,
+				A9736A0D1D1005AF005BBAE0 /* nube-junta-verde.png */,
 				1487F1A3177C35AA004A1A5A /* CredentialsError.png */,
 				1487F1A4177C35AA004A1A5A /* CredentialsError@2x.png */,
 				1487F1A5177C35AA004A1A5A /* NonRevealPasswordIcon.png */,
@@ -3263,6 +3306,7 @@
 		59F470341C5F9AF4005B6091 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A93174FC1D117833001BDBFF /* nube-junta-verde-fake-splash.png */,
 				593D14881C60BE1E005161E2 /* SplashImage.png */,
 			);
 			name = SplashScreen;
@@ -3889,7 +3933,7 @@
 					};
 					EA6606941AA767F700BA2C65 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 9B5WD74GWJ;
+						DevelopmentTeam = 2P43RZUB7Q;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -3901,7 +3945,7 @@
 					};
 					EAB0AB3119ED356A00764C31 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 9B5WD74GWJ;
+						DevelopmentTeam = 2P43RZUB7Q;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -3913,7 +3957,7 @@
 					};
 					EAB0AB3F19ED356A00764C31 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 9B5WD74GWJ;
+						DevelopmentTeam = 2P43RZUB7Q;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -4014,6 +4058,7 @@
 				148DD5DC177851E700FB9977 /* UploadRecentCell.xib in Resources */,
 				40E354C51A14D671000E7FE4 /* ownCloud-xmas@3x.png in Resources */,
 				40E354E11A14FE36000E7FE4 /* sound_icon@3x.png in Resources */,
+				A944FB4C1D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf in Resources */,
 				148DD62417785D6900FB9977 /* DetailView.xib in Resources */,
 				59EDC4241C611E700050939C /* iphoneShare@2x.png in Resources */,
 				148DD62B17785D9800FB9977 /* FilePreviewViewController.xib in Resources */,
@@ -4066,6 +4111,7 @@
 				13A5ADB718883C77000EB617 /* WhatsappShareipad.png in Resources */,
 				1487F21A177C35AA004A1A5A /* doc_icon.png in Resources */,
 				1487F21B177C35AA004A1A5A /* doc_icon@2x.png in Resources */,
+				A944FB311D1011710042BEE3 /* nube-junta-verde-nombre.png in Resources */,
 				1487F21C177C35AA004A1A5A /* doc_icon@2x~ipad.png in Resources */,
 				1487F21D177C35AA004A1A5A /* doc_icon~ipad.png in Resources */,
 				EABD89211BBE82C400DA5281 /* TSMessagesDefaultDesign.json in Resources */,
@@ -4083,6 +4129,7 @@
 				EABD88E51BBE82C400DA5281 /* NotificationBackgroundError@2x.png in Resources */,
 				EA0599861BB92B19002C2864 /* ShareUserCell.xib in Resources */,
 				1487F229177C35AA004A1A5A /* image_icon@2x.png in Resources */,
+				A944FB471D101D6D0042BEE3 /* NewsGotTLight.TTF in Resources */,
 				1487F22A177C35AA004A1A5A /* image_icon@2x~ipad.png in Resources */,
 				13B1DDE218EC1F69006166DC /* sharedItemWhite.png in Resources */,
 				4030D8F11A16275900DB0871 /* file_icon~ipad.png in Resources */,
@@ -4101,6 +4148,7 @@
 				59C0F2B31A963670007FE71B /* iTunesArtwork@2x in Resources */,
 				1487F22C177C35AA004A1A5A /* movie_icon.png in Resources */,
 				EABD88F51BBE82C400DA5281 /* NotificationBackgroundMessage@2x.png in Resources */,
+				A93174FD1D117833001BDBFF /* nube-junta-verde-fake-splash.png in Resources */,
 				14A6115A19346D0000AECA34 /* sharedItemSwipe@2x.png in Resources */,
 				1487F22D177C35AA004A1A5A /* movie_icon@2x.png in Resources */,
 				40E354D51A14FCE7000E7FE4 /* movie_icon@3x.png in Resources */,
@@ -4109,6 +4157,8 @@
 				1487F22F177C35AA004A1A5A /* movie_icon~ipad.png in Resources */,
 				1487F230177C35AA004A1A5A /* pdf_icon.png in Resources */,
 				1487F231177C35AA004A1A5A /* pdf_icon@2x.png in Resources */,
+				A9736A0E1D1005AF005BBAE0 /* nube-junta-verde.png in Resources */,
+				A944FB361D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib in Resources */,
 				1487F232177C35AA004A1A5A /* pdf_icon@2x~ipad.png in Resources */,
 				1487F233177C35AA004A1A5A /* pdf_icon~ipad.png in Resources */,
 				1487F234177C35AA004A1A5A /* RootFolderIcon.png in Resources */,
@@ -4163,6 +4213,7 @@
 				EABD88F11BBE82C400DA5281 /* NotificationBackgroundMessage.png in Resources */,
 				4030D8F61A16277100DB0871 /* file_icon@2x.png in Resources */,
 				13A9FCF317E9858C00FF48D7 /* Overlay.png in Resources */,
+				A944FB4A1D101D6D0042BEE3 /* texgyreheroscn-bolditalic.otf in Resources */,
 				1487F24E177C35AA004A1A5A /* SecureConnectionIcon.png in Resources */,
 				1487F24F177C35AA004A1A5A /* SecureConnectionIcon@2x.png in Resources */,
 				4030D8EB1A161FD600DB0871 /* CopyLinkShareiphone@3x.png in Resources */,
@@ -4188,6 +4239,7 @@
 				1487F258177C35AA004A1A5A /* radio_unchecked.png in Resources */,
 				1487F259177C35AA004A1A5A /* radio_unchecked@2x.png in Resources */,
 				59EDC41C1C611C630050939C /* owncloudLogoFiles@2x.png in Resources */,
+				A944FB4B1D101D6D0042BEE3 /* texgyreheroscn-italic.otf in Resources */,
 				13A5ADB618883C77000EB617 /* CopyLinkShareiphone@2x.png in Resources */,
 				1487F25A177C35AA004A1A5A /* arrow_button.png in Resources */,
 				40F2F6131C5A180700129F92 /* owncloudLogoFiles.png in Resources */,
@@ -4232,13 +4284,17 @@
 				1487F275177C35AA004A1A5A /* server.png in Resources */,
 				EA5C6F851B70BEE30088071B /* ShareFileCell.xib in Resources */,
 				14A6115919346D0000AECA34 /* sharedItemSwipe.png in Resources */,
+				A944FB481D101D6D0042BEE3 /* NewsGotTMed.TTF in Resources */,
 				40E354CF1A14D6E8000E7FE4 /* deleteTB@3x.png in Resources */,
+				A944FB451D101D6D0042BEE3 /* NewsGotTBold.TTF in Resources */,
 				1487F276177C35AA004A1A5A /* server@2x.png in Resources */,
 				4052B4E31B4ECF35000788DA /* btnHelpPage4.png in Resources */,
 				1487F277177C35AA004A1A5A /* user.png in Resources */,
+				A944FB461D101D6D0042BEE3 /* NewsGotTDem.TTF in Resources */,
 				1487F278177C35AA004A1A5A /* user@2x.png in Resources */,
 				1487F279177C35AA004A1A5A /* exitFullScreen.png in Resources */,
 				1487F27A177C35AA004A1A5A /* exitFullScreen@2x.png in Resources */,
+				A944FB441D101D6D0042BEE3 /* NewsGotT.TTF in Resources */,
 				14A7F7A218ED5781009AF347 /* presentation_icon~ipad.png in Resources */,
 				1487F27B177C35AA004A1A5A /* fullScreen.png in Resources */,
 				1487F27C177C35AA004A1A5A /* fullScreen@2x.png in Resources */,
@@ -4250,6 +4306,7 @@
 				1487F280177C35AA004A1A5A /* playback_play@2x.png in Resources */,
 				1487F283177C35AA004A1A5A /* deleteTB.png in Resources */,
 				1487F284177C35AA004A1A5A /* deleteTB@2x.png in Resources */,
+				A944FB491D101D6D0042BEE3 /* texgyreheroscn-bold.otf in Resources */,
 				1487F285177C35AA004A1A5A /* image_fail_download.png in Resources */,
 				1487F286177C35AA004A1A5A /* image_fail_download@2x.png in Resources */,
 				1487F287177C35AA004A1A5A /* openWithTB.png in Resources */,
@@ -4782,6 +4839,7 @@
 				59A0DADB1941A7A60088FECD /* CheckAccessToServer.m in Sources */,
 				593D531D17BF701800191846 /* SSOViewController.m in Sources */,
 				400A637E1B4FD75600890579 /* UIView+IFTTTJazzHands.m in Sources */,
+				A944FB391D10194B0042BEE3 /* NubeLoginViewController.m in Sources */,
 				59C71D241A9216AE00F66166 /* ThumbsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5150,7 +5208,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = "Owncloud iOs Client/Owncloud iOs Client.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
 				CODE_SIGN_RESOURCE_RULES_PATH = "";
 				DEFINES_MODULE = YES;
@@ -5183,8 +5241,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = es.juntadeandalucia.nubeficheros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c3fc313-37ed-4c49-84f2-a23784ddfdc1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4c3fc313-37ed-4c49-84f2-a23784ddfdc1";
+				PROVISIONING_PROFILE = "0a5b752e-3452-4ff8-aee3-75c3eeb0bb6a";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0a5b752e-3452-4ff8-aee3-75c3eeb0bb6a";
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/Owncloud iOS Client-Bridging-Header.h";
