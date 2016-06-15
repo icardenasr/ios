@@ -79,28 +79,32 @@
     [self.aiview stopAnimating];
     
     if (IS_IPHONE_6P) {
+        // iPhone 6 Plus
         self.appNameLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:60];
         self.userTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         self.passwordTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         [self.connectButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:32]];
         [self.termsButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:22]];
     } else if (IS_IPHONE_6) {
+        // iPhone 6
         self.appNameLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:46];
         self.userTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         self.passwordTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         [self.connectButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:32]];
         [self.termsButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:22]];
     } else if (IS_IPHONE) {
+        // iPhone 4 y 5
         self.appNameLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:42];
         self.userTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         self.passwordTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         [self.connectButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:30]];
         [self.termsButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:18]];
     } else {
-        self.appNameLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:32];
+        // iPad
+        self.appNameLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:76];
         self.userTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         self.passwordTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
-        [self.connectButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:32]];
+        [self.connectButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:34]];
         [self.termsButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:22]];
     }
     

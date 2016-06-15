@@ -631,6 +631,7 @@
 		90D608FA1C89844E0049CCE4 /* SortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B3D3A1C8867AA00BCC93B /* SortManager.m */; };
 		90D608FC1C8984760049CCE4 /* SortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 905B3D3A1C8867AA00BCC93B /* SortManager.m */; };
 		A93174FD1D117833001BDBFF /* nube-junta-verde-fake-splash.png in Resources */ = {isa = PBXBuildFile; fileRef = A93174FC1D117833001BDBFF /* nube-junta-verde-fake-splash.png */; };
+		A93175001D117D99001BDBFF /* NubeLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93174FF1D117D99001BDBFF /* NubeLoginViewController_iPad.xib */; };
 		A944FB311D1011710042BEE3 /* nube-junta-verde-nombre.png in Resources */ = {isa = PBXBuildFile; fileRef = A944FB301D1011710042BEE3 /* nube-junta-verde-nombre.png */; };
 		A944FB361D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A944FB351D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib */; };
 		A944FB391D10194B0042BEE3 /* NubeLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A944FB381D10194B0042BEE3 /* NubeLoginViewController.m */; };
@@ -1657,6 +1658,7 @@
 		9069EAA51CF5F07200810996 /* OCLoadingSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCLoadingSpinner.h; path = Utils/OCLoadingSpinner.h; sourceTree = "<group>"; };
 		9069EAA61CF5F07200810996 /* OCLoadingSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OCLoadingSpinner.m; path = Utils/OCLoadingSpinner.m; sourceTree = "<group>"; };
 		A93174FC1D117833001BDBFF /* nube-junta-verde-fake-splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nube-junta-verde-fake-splash.png"; sourceTree = "<group>"; };
+		A93174FF1D117D99001BDBFF /* NubeLoginViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NubeLoginViewController_iPad.xib; path = Login/Login/NubeLoginViewController_iPad.xib; sourceTree = "<group>"; };
 		A944FB301D1011710042BEE3 /* nube-junta-verde-nombre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nube-junta-verde-nombre.png"; sourceTree = "<group>"; };
 		A944FB351D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NubeLoginViewController_iPhone.xib; path = Login/Login/NubeLoginViewController_iPhone.xib; sourceTree = "<group>"; };
 		A944FB371D10194B0042BEE3 /* NubeLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NubeLoginViewController.h; path = Login/Login/NubeLoginViewController.h; sourceTree = "<group>"; };
@@ -2417,6 +2419,7 @@
 				1420C3A8178A9F5000C0455C /* LoginViewController.h */,
 				1420C3A9178A9F5000C0455C /* LoginViewController.m */,
 				A944FB351D10190F0042BEE3 /* NubeLoginViewController_iPhone.xib */,
+				A93174FF1D117D99001BDBFF /* NubeLoginViewController_iPad.xib */,
 				A944FB371D10194B0042BEE3 /* NubeLoginViewController.h */,
 				A944FB381D10194B0042BEE3 /* NubeLoginViewController.m */,
 			);
@@ -4230,6 +4233,7 @@
 				1487F252177C35AA004A1A5A /* genericFile_icon.png in Resources */,
 				1487F253177C35AA004A1A5A /* genericFile_icon@2x.png in Resources */,
 				1487F254177C35AA004A1A5A /* imageSelected.png in Resources */,
+				A93175001D117D99001BDBFF /* NubeLoginViewController_iPad.xib in Resources */,
 				1487F255177C35AA004A1A5A /* imageSelected@2x.png in Resources */,
 				1487F256177C35AA004A1A5A /* radio_checked.png in Resources */,
 				40E354C71A14D6A2000E7FE4 /* sharedItem@3x.png in Resources */,
