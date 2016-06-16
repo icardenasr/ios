@@ -21,11 +21,11 @@
 
 //Tint color of navigation bar
 + (UIColor*)colorOfNavigationBar{
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:1.0];
+    return [UIColor colorWithRed:0/255.0f green:89/255.0f blue:21/255.0f alpha:1.0];
 }
 //Color of background view in navigation bar
 + (UIColor*)colorOfBackgroundNavBarImage {
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:0.7];
+    return [UIColor colorWithRed:0/255.0f green:89/255.0f blue:21/255.0f alpha:0.7];
 }
 
 //Color of letters in navigation bar
@@ -40,17 +40,17 @@
 
 //Color of background in custom status bar, only for iOS 7
 + (UIColor*)colorOfBackgroundStatusBarNotification {
-    return [UIColor colorWithRed:55/255.0f green:70/255.0f blue:89/255.0f alpha:1.0];
+    return [UIColor colorWithRed:0/255.0f green:140/255.0f blue:77/255.0f alpha:1.0];
 }
 
 //Tint color of tool bar
 + (UIColor*)colorOfToolBar{
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:1.0];
+    return [UIColor colorWithRed:0/255.0f green:89/255.0f blue:21/255.0f alpha:1.0];
 }
 
 //Color of background view in toolBar bar, only for iOS 7 for transparency
 + (UIColor*)colorOfBackgroundToolBarImage {
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:0.7];
+    return [UIColor colorWithRed:0/255.0f green:89/255.0f blue:21/255.0f alpha:0.7];
 }
 
 //Tint color of tool bar buttons
@@ -64,7 +64,7 @@
 
 //Tint color of tab bar
 + (UIColor*)colorOfTintUITabBar {
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:1.0];
+    return [UIColor colorWithRed:0/255.0f green:89/255.0f blue:21/255.0f alpha:1.0];
 }
 
 //Tint color for selected tab bar item
@@ -97,7 +97,7 @@
 }
 
 
-//LOGIN VIEW
+// LOGIN VIEW - NO APLICAN (SE HA CREADO UNA NUEVA PANTALLA)
 
 //Background color of login view
 + (UIColor*)colorOfLoginBackground{
@@ -142,7 +142,7 @@
 }
 
 
-//FILE LIST
+// FILE LIST
 
 //Text color of selected folder
 + (UIColor*)colorOfTxtSelectFolderToolbar {
@@ -151,7 +151,7 @@
 
 //Section index color
 + (UIColor*)colorOfSectionIndexColorFileList {
-    return [UIColor colorWithRed:28/255.0f green:44/255.0f blue:67/255.0f alpha:0.7];
+    return [UIColor colorWithRed:0/255.0f green:89/255.0f blue:21/255.0f alpha:0.7];
 }
 
 //Header section index color

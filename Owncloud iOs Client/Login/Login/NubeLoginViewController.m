@@ -68,6 +68,7 @@
         isNeedToCheckAgain = YES;
         hasInvalidAuth = NO;
         isHttpsSecure = NO;
+        isLoginRightNow = NO;
     }
     return self;
 }
@@ -212,6 +213,7 @@
         
         // Chequeamos que se llega al servidor
         isCheckingTheServerRightNow = YES;
+        isLoginRightNow = YES;
         [[CheckAccessToServer sharedManager] isConnectionToTheServerByUrl:kOwncloudUrl];
     }
 }
@@ -341,7 +343,7 @@
 -(void)updateInterfaceWithConnectionToTheServer:(BOOL)isConnection {
     DLog(@"updateInterfaceWithConnectionToTheServer");
     
-    if(isConnection) {
+    if (isConnection) {
         isConnectionToServer = YES;
         isLoginButtonEnabled = YES;
     } else {
@@ -367,16 +369,20 @@
         [self goTryToDoLogin];
     } else {
         // No hay conexion con el servidor - Mostramos error
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Sin conexión"
-                                                       message: @"No hay conexión con el servidor. Por favor, confirme que dispone de conexión y vuelva a probar otra vez"
-                                                      delegate: self
-                                             cancelButtonTitle:NSLocalizedString(@"ok", nil)
-                                             otherButtonTitles:nil,nil];
-        [alert show];
-        // Ocultamos el indicador de actividad
-        [self.aiview stopAnimating];
-        // Habilitamos los controles
-        [self enableControls];
+        if (isLoginRightNow) {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Sin conexión"
+                                                           message: @"No hay conexión con el servidor. Por favor, confirme que dispone de conexión y vuelva a probar otra vez"
+                                                          delegate: self
+                                                 cancelButtonTitle:NSLocalizedString(@"ok", nil)
+                                                 otherButtonTitles:nil,nil];
+            [alert show];
+            // Ocultamos el indicador de actividad
+            [self.aiview stopAnimating];
+            // Habilitamos los controles
+            [self enableControls];
+            // Desactivamos el proceso de login
+            isLoginRightNow = NO;
+        }
     }
     
     isCheckingTheServerRightNow = NO;
@@ -416,7 +422,7 @@
     [[AppDelegate sharedOCCommunication] setUserAgent:[UtilsUrls getUserAgent]];
     [[AppDelegate sharedOCCommunication] readFolder:_connectString withUserSessionToken:nil onCommunication:[AppDelegate sharedOCCommunication] successRequest:^(NSHTTPURLResponse *response, NSArray *items, NSString *redirectedServer, NSString *token){
         if (!redirectedServer){
-            //Pass the items with OCFileDto to FileDto Array
+            // Pass the items with OCFileDto to FileDto Array
             NSMutableArray *directoryList = [UtilsDtos passToFileDtoArrayThisOCFileDtoArray:items];
             [self createUserAndDataInTheSystemWithRequest:directoryList andCode:response.statusCode];
         }
@@ -424,6 +430,9 @@
         
         DLog(@"error: %@", error);
         DLog(@"Operation error: %ld", (long)response.statusCode);
+        
+        // Desactivamos el login
+        isLoginRightNow = NO;
         
         switch (response.statusCode) {
             case kOCErrorServerUnauthorized:
@@ -480,6 +489,9 @@
 
 // Metodo que se llama cuando la aplicacion recibe los datos tras la autenticacion
 -(void)createUserAndDataInTheSystemWithRequest:(NSArray *)items andCode:(NSInteger) requestCode {
+    // Desactivamos el login
+    isLoginRightNow = NO;
+    
     if(requestCode >= 400) {
         // Avisamos del error
         isError500 = YES;

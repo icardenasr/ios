@@ -32,6 +32,7 @@
     BOOL urlEditable;
     BOOL userNameEditable;
     BOOL hasInvalidAuth;
+    BOOL isLoginRightNow;
 
 }
 

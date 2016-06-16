@@ -652,7 +652,6 @@
 		A99C2DFC1D0ADB1200040D9B /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A99C2DFA1D0ADB1200040D9B /* ELCAssetPicker.xib */; };
 		A99C2DFD1D0ADB1200040D9B /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A99C2DFB1D0ADB1200040D9B /* ELCAssetTablePicker.xib */; };
 		A9BCE2081D0ABC8D0053324B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BCE2071D0ABC8D0053324B /* Launch Screen.storyboard */; };
-		A9C483D11D084919003F45C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C483D01D084919003F45C7 /* Images.xcassets */; };
 		EA0599851BB92B19002C2864 /* ShareUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0599831BB92B19002C2864 /* ShareUserCell.swift */; };
 		EA0599861BB92B19002C2864 /* ShareUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0599841BB92B19002C2864 /* ShareUserCell.xib */; };
 		EA0599931BB94F3F002C2864 /* ShareSearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0599911BB94F3F002C2864 /* ShareSearchUserViewController.m */; };
@@ -1687,7 +1686,6 @@
 		A99C2DFA1D0ADB1200040D9B /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
 		A99C2DFB1D0ADB1200040D9B /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
 		A9BCE2071D0ABC8D0053324B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		A9C483D01D084919003F45C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D924DCBC1B973E88008B4BE7 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		D924DCBE1B973E98008B4BE7 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		D924DCBF1B973E98008B4BE7 /* OCMArg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
@@ -2047,7 +2045,6 @@
 				137F615615E36334001F460C /* Utils */,
 				EA42197F1A94F6850081D400 /* Owncloud iOs Client-Bridging-Header.h */,
 				EAF771281B72691100ED6E6E /* OCExtensions-Bridging-Header.h */,
-				A9C483D01D084919003F45C7 /* Images.xcassets */,
 			);
 			path = "Owncloud iOs Client";
 			sourceTree = "<group>";
@@ -4320,7 +4317,6 @@
 				40AB1F6B1A123D1B003E7397 /* TABShares@3x.png in Resources */,
 				59EDC42E1C611F9A0050939C /* btnHelpPage1@2x.png in Resources */,
 				1487F28C177C35AA004A1A5A /* ASMoveFile@2x.png in Resources */,
-				A9C483D11D084919003F45C7 /* Images.xcassets in Resources */,
 				400560751A03B1190030D502 /* MainAppIcon_40-40@2x.png in Resources */,
 				1487F28D177C35AA004A1A5A /* ASOpenWith.png in Resources */,
 				1487F28E177C35AA004A1A5A /* ASOpenWith@2x.png in Resources */,
