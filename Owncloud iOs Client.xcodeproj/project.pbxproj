@@ -652,6 +652,9 @@
 		A99C2DFC1D0ADB1200040D9B /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A99C2DFA1D0ADB1200040D9B /* ELCAssetPicker.xib */; };
 		A99C2DFD1D0ADB1200040D9B /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A99C2DFB1D0ADB1200040D9B /* ELCAssetTablePicker.xib */; };
 		A9BCE2081D0ABC8D0053324B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BCE2071D0ABC8D0053324B /* Launch Screen.storyboard */; };
+		A9EAEDC11D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EAEDC01D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib */; };
+		A9EAEDC51D13C3F500663D78 /* NubeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EAEDC41D13C3F500663D78 /* NubeSettingsViewController.m */; };
+		A9EAEDC81D13FED600663D78 /* junta.png in Resources */ = {isa = PBXBuildFile; fileRef = A9EAEDC71D13FED500663D78 /* junta.png */; };
 		EA0599851BB92B19002C2864 /* ShareUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0599831BB92B19002C2864 /* ShareUserCell.swift */; };
 		EA0599861BB92B19002C2864 /* ShareUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0599841BB92B19002C2864 /* ShareUserCell.xib */; };
 		EA0599931BB94F3F002C2864 /* ShareSearchUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0599911BB94F3F002C2864 /* ShareSearchUserViewController.m */; };
@@ -1686,6 +1689,10 @@
 		A99C2DFA1D0ADB1200040D9B /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
 		A99C2DFB1D0ADB1200040D9B /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
 		A9BCE2071D0ABC8D0053324B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A9EAEDC01D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NubeSettingsViewController_iPhone.xib; path = Tabs/SettingTab/NubeSettingsViewController_iPhone.xib; sourceTree = "<group>"; };
+		A9EAEDC31D13C3F500663D78 /* NubeSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NubeSettingsViewController.h; path = Tabs/SettingTab/NubeSettingsViewController.h; sourceTree = "<group>"; };
+		A9EAEDC41D13C3F500663D78 /* NubeSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NubeSettingsViewController.m; path = Tabs/SettingTab/NubeSettingsViewController.m; sourceTree = "<group>"; };
+		A9EAEDC71D13FED500663D78 /* junta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = junta.png; sourceTree = "<group>"; };
 		D924DCBC1B973E88008B4BE7 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		D924DCBE1B973E98008B4BE7 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		D924DCBF1B973E98008B4BE7 /* OCMArg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
@@ -2133,6 +2140,9 @@
 				148DD6E217786A1400FB9977 /* SettingsViewController.h */,
 				148DD6E317786A1400FB9977 /* SettingsViewController.m */,
 				148DD6E417786A1400FB9977 /* SettingsViewController.xib */,
+				A9EAEDC31D13C3F500663D78 /* NubeSettingsViewController.h */,
+				A9EAEDC41D13C3F500663D78 /* NubeSettingsViewController.m */,
+				A9EAEDC01D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib */,
 				148DD6E517786A1400FB9977 /* WebViewController.h */,
 				148DD6E617786A1400FB9977 /* WebViewController.m */,
 				148DD6E717786A1400FB9977 /* WebViewController.xib */,
@@ -2488,6 +2498,7 @@
 		1487F15E177C35AA004A1A5A /* ImageBranding */ = {
 			isa = PBXGroup;
 			children = (
+				A9EAEDC61D13FE8700663D78 /* SettingsScreen */,
 				13AA2C9617D8AF8100DB5E11 /* Bar */,
 				1487F15F177C35AA004A1A5A /* Branding */,
 				1487F175177C35AA004A1A5A /* FilesViewScreen */,
@@ -3339,6 +3350,14 @@
 				148DD6B61778693000FB9977 /* RecentViewController.xib */,
 			);
 			name = "Recent Tab";
+			sourceTree = "<group>";
+		};
+		A9EAEDC61D13FE8700663D78 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A9EAEDC71D13FED500663D78 /* junta.png */,
+			);
+			name = SettingsScreen;
 			sourceTree = "<group>";
 		};
 		D924DCAF1B973D7E008B4BE7 /* OCMock_3.1.5 */ = {
@@ -4328,11 +4347,13 @@
 				1487F293177C35AA004A1A5A /* movieOverlay.png in Resources */,
 				1487F294177C35AA004A1A5A /* movieOverlay@2x.png in Resources */,
 				13A5ADB318883C77000EB617 /* CopyLinkShareipad.png in Resources */,
+				A9EAEDC11D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib in Resources */,
 				EA2B4FB017FAFF69001766BB /* company_empty_screen_ipad.png in Resources */,
 				4052B4E11B4ECF35000788DA /* btnHelpPage2.png in Resources */,
 				40E354DD1A14FE00000E7FE4 /* image_icon@3x.png in Resources */,
 				14B0084118FD1B5B004CB06B /* EmptyCell.xib in Resources */,
 				149D98BE195AAD08005E0C73 /* fileSharedWithUs@2x.png in Resources */,
+				A9EAEDC81D13FED600663D78 /* junta.png in Resources */,
 				4052B4E41B4ECF35000788DA /* btnHelpPage5.png in Resources */,
 				14A9B1CB18E2E687001E9457 /* FileUpdatedIcon@2x.png in Resources */,
 				EABD89011BBE82C400DA5281 /* NotificationBackgroundSuccessIcon.png in Resources */,
@@ -4787,6 +4808,7 @@
 				400A637C1B4FD75600890579 /* IFTTTTranslationAnimation.m in Sources */,
 				59C71D201A9216AE00F66166 /* ReaderThumbsView.m in Sources */,
 				40FF874319F81396008B7C62 /* OCKeychain.m in Sources */,
+				A9EAEDC51D13C3F500663D78 /* NubeSettingsViewController.m in Sources */,
 				400A63751B4FD75600890579 /* IFTTTScaleAnimation.m in Sources */,
 				1487F135177C2F08004A1A5A /* ManageAppSettingsDB.m in Sources */,
 				402596051CF470640037A78A /* UtilsBrandedOptions.m in Sources */,

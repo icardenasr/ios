@@ -30,7 +30,8 @@
 
 @class FilesViewController;
 @class RecentViewController;
-@class SettingsViewController;
+//@class SettingsViewController;
+@class NubeSettingsViewController;
 //@class LoginViewController;
 @class NubeLoginViewController;
 @class HelpGuideViewController;
@@ -63,7 +64,8 @@ extern NSString * NotReachableNetworkForDownloadsNotification;
     //Pointer to a actual files view controller where the user is.
     FilesViewController *_presentFilesViewController;
     //FavouritesViewController *_favouritesViewController;
-    SettingsViewController *_settingsViewController;
+    //SettingsViewController *_settingsViewController;
+    NubeSettingsViewController *_settingsViewController;
     //OCTabBarController *_tabBarController;
    
     UISplitViewController *_splitViewController;
@@ -302,7 +304,8 @@ extern NSString * NotReachableNetworkForDownloadsNotification;
 @property (nonatomic, strong) RecentViewController *recentViewController;
 @property (nonatomic, strong) FilesViewController *filesViewController;
 @property (nonatomic, strong) FilesViewController *presentFilesViewController;
-@property (nonatomic, strong) SettingsViewController *settingsViewController;
+//@property (nonatomic, strong) SettingsViewController *settingsViewController;
+@property (nonatomic, strong) NubeSettingsViewController *settingsViewController;
 @property (nonatomic, strong) UISplitViewController *splitViewController;
 @property (nonatomic, strong)DetailViewController *detailViewController;
 @property (nonatomic, strong) MediaViewController *mediaPlayer;

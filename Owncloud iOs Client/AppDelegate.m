@@ -14,7 +14,8 @@
 
 #import "AppDelegate.h"
 #import "FilesViewController.h"
-#import "SettingsViewController.h"
+//#import "SettingsViewController.h"
+#import "NubeSettingsViewController.h"
 #import "RecentViewController.h"
 #import "CheckAccessToServer.h"
 #import "DetailViewController.h"
@@ -521,7 +522,11 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
     _sharedViewController = [[SharedViewController alloc]initWithNibName:@"SharedViewController" bundle:nil];
     OCNavigationController *sharedNavigationController = [[OCNavigationController alloc]initWithRootViewController:_sharedViewController];
     
-    _settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+    if (IS_IPHONE) {
+        _settingsViewController = [[NubeSettingsViewController alloc] initWithNibName:@"NubeSettingsViewController_iPhone" bundle:nil];
+    } else {
+        _settingsViewController = [[NubeSettingsViewController alloc] initWithNibName:@"NubeSettingsViewController_iPad" bundle:nil];
+    }
     OCNavigationController *settingsNavigationController = [[OCNavigationController alloc]initWithRootViewController:_settingsViewController];
     
     UIImage *tabBarImageSelected = [UIImage imageNamed:@"TABfiles.png"];
@@ -1829,21 +1834,24 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
     if (_presentFilesViewController.mDeleteFile.popupQuery) {
         [_presentFilesViewController.mDeleteFile.popupQuery dismissWithClickedButtonIndex:0 animated:NO];
     }
+    
+    // ESTAS OPCIONES DE LA VISTA DE SETTINGS SE QUITAN
     //Close the pop-up of twitter and facebook in SettingViewController
-    if (_settingsViewController.popupQuery) {
+    /*if (_settingsViewController.popupQuery) {
         [_settingsViewController.popupQuery dismissWithClickedButtonIndex:0 animated:NO];
-    }
-    if (_settingsViewController.twitter) {
+    }*/
+    /*if (_settingsViewController.twitter) {
         [_settingsViewController.twitter dismissViewControllerAnimated:NO completion:nil];
-    }
-    if (_settingsViewController.facebook) {
+    }*/
+    /*if (_settingsViewController.facebook) {
         [_settingsViewController.facebook dismissViewControllerAnimated:NO completion:nil];
-    }
+    }*/
     //Close the view of mail in SettingViewController
-    if (_settingsViewController.mailer) {
+    /*if (_settingsViewController.mailer) {
         [_settingsViewController.mailer dismissViewControllerAnimated:NO completion:nil];
-    }
-    //Close the pincode view controller in SettingViewController
+    }*/
+    
+    // Close the pincode view controller in SettingViewController
     if (_settingsViewController.vc) {
         [_settingsViewController.vc dismissViewControllerAnimated:NO completion:nil];
     }
