@@ -10,6 +10,11 @@
 
 #import "ManageUsersDB.h"
 #import "InstantUpload.h"
+#import "ManageThumbnails.h"
+#import "UtilsFramework.h"
+#import "UtilsUrls.h"
+#import "OCPortraitNavigationViewController.h"
+#import "ManageAppSettingsDB.h"
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
@@ -25,7 +30,8 @@
 #define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
-#define kTermsUrl @"https://correo.juntadeandalucia.es/ayuda/index.html#/term_consigna"
+#define kHelpUrl @"https://correo.juntadeandalucia.es/ayuda/index.html#/nube/app"
+#define kSupportUrl @"https://correo.juntadeandalucia.es/ayuda/index.html#/soporte"
 
 
 @interface NubeSettingsViewController () <InstantUploadDelegate>
@@ -81,7 +87,6 @@
         [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
         [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
     }
-
     
 }
 
@@ -96,6 +101,16 @@
     self.user = app.activeUser;
     
     self.listUsers = [ManageUsersDB getAllUsers];
+    
+    // Como debe estar el switch de codigo de acceso
+    if(![ManageAppSettingsDB isPasscode]) {
+        // No hay condigo configurado - Esta apagado
+        [switchPasscode setOn:false];
+    } else {
+        // Hay codigo configurado - Esta encendido
+        [switchPasscode setOn:true];
+    }
+
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -113,10 +128,113 @@
     return NO;
 }
 
+// Metodo para ocultar el teclado
+- (void)dismissKeyboard {
+    [self.view endEditing:YES];
+}
+
 
 #pragma mark - Setting Actions
 
+// Metodo de accion para mostrar la ayuda
+- (IBAction)showHelp:(id)sender {
+    [self dismissKeyboard];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kHelpUrl]];
+}
 
+// Metodo de accion para mostrar el soporte
+- (IBAction)showSupport:(id)sender {
+    [self dismissKeyboard];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kSupportUrl]];
+}
+
+// Metodo de accion para cambiar la activacion de una clave de acceso
+-(IBAction)changeSwitchPasscode:(id)sender {
+    
+    // Create pass code view controller
+    self.vc = [[KKPasscodeViewController alloc] initWithNibName:nil bundle:nil];
+    self.vc.delegate = self;
+    
+    // Create the navigation bar of portrait
+    OCPortraitNavigationViewController *oc = [[OCPortraitNavigationViewController alloc]initWithRootViewController:_vc];
+    
+    // Indicate the pass code view mode
+    if(![ManageAppSettingsDB isPasscode]) {
+        //Set mode
+        self.vc.mode = KKPasscodeModeSet;
+    } else {
+        //Dissable mode
+        self.vc.mode = KKPasscodeModeDisabled;
+    }
+    
+    if (IS_IPHONE) {
+        //is iphone
+        [self presentViewController:oc animated:YES completion:nil];
+    } else {
+        //is ipad
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        oc.modalPresentationStyle = UIModalPresentationFormSheet;
+        [app.splitViewController presentViewController:oc animated:YES completion:nil];
+    }
+}
+
+// Metodo de accion para mostrar la confirmacion de desconectar el usuario
+-(IBAction)showDisconnectActionSheet:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"¿Deseas salir?"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancelar"
+                                               destructiveButtonTitle:@"Salir"
+                                                    otherButtonTitles:nil];
+    [actionSheet showInView:self.view];
+    actionSheet.tag = 100;
+}
+
+
+#pragma mark - Action Sheet
+
+// Metodo que controla las acciones de las Action Sheet
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (actionSheet.tag == 100) {
+        switch (buttonIndex) {
+            case 0:
+                // Salir
+                [self disconnectUser];
+                break;
+            case 1:
+                // Cancelar
+                break;
+        }
+    }
+}
+
+#pragma mark - Utils
+
+// Metodo que desconecta la sesion del usuario
+- (void) disconnectUser {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    [[ManageThumbnails sharedManager] deleteThumbnailCacheFolderOfUserId: APP_DELEGATE.activeUser.idUser];
+    [ManageUsersDB removeUserAndDataByIdUser: APP_DELEGATE.activeUser.idUser];
+    [UtilsFramework deleteAllCookies];
+    DLog(@"ID to delete user: %ld", (long)app.activeUser.idUser);
+    
+    // Delete files os user in the system
+    NSString *userFolder = [NSString stringWithFormat:@"/%ld", (long)app.activeUser.idUser];
+    NSString *path= [[UtilsUrls getOwnCloudFilePath] stringByAppendingPathComponent:userFolder];
+    
+    NSError *error;
+    [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+    [self performSelectorInBackground:@selector(cancelAllDownloads) withObject:nil];
+    app.uploadArray=[[NSMutableArray alloc]init];
+    [app updateRecents];
+    [app restartAppAfterDeleteAllAccounts];
+}
+
+// Metodo que cancela todas las descargas en curso
+- (void) cancelAllDownloads {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    [appDelegate.downloadManager cancelDownloads];
+    [[AppDelegate sharedSyncFolderManager] cancelAllDownloads];
+}
 
 
 @end

@@ -39,8 +39,8 @@
 #define k_remove_to_contains_path @"/index.php/apps/"
 
 // Constantes para las URLs del servicio
-#define kOwncloudUrl @"https://cloud.nachopavon.com/"
-#define kTermsUrl @"https://correo.juntadeandalucia.es/ayuda/index.html#/term_consigna"
+#define kOwncloudUrl @"http://10.240.240.18/owncloud/"
+#define kTermsUrl @"https://correo.juntadeandalucia.es/ayuda/index.html#/term_nube"
 
 
 @interface NubeLoginViewController ()

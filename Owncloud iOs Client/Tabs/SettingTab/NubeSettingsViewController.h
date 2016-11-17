@@ -13,7 +13,8 @@
 #import "AccountCell.h"
 #import "SyncFolderManager.h"
 
-@interface NubeSettingsViewController : UIViewController <KKPasscodeViewControllerDelegate> {
+
+@interface NubeSettingsViewController : UIViewController <UIActionSheetDelegate, KKPasscodeViewControllerDelegate> {
     
 }
 
@@ -29,13 +30,14 @@
 @property(nonatomic, strong)DetailViewController *detailViewController;
 @property(nonatomic, strong)UserDto *user;
 
-//App pin
+// App pin
 @property (nonatomic,strong) KKPasscodeViewController* vc;
 
+// Metodos de accion
+- (IBAction)showHelp:(id)sender;
+- (IBAction)showSupport:(id)sender;
 - (IBAction)changeSwitchPasscode:(id)sender;
-- (IBAction)changeSwitchTouchID:(id)sender;
-- (IBAction)changeSwitchInstantUpload:(id)sender;
-- (void)disconnectUser;
+- (IBAction)showDisconnectActionSheet:(id)sender;
 
 
 @end
