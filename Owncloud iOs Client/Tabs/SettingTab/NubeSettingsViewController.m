@@ -76,8 +76,15 @@
         self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:30]];
         self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
-        [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:26]];
-        [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:26]];
+        if (IS_IPHONE_4_OR_LESS) {
+            // iPhone 4 y 4S
+            [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:24]];
+            [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:24]];
+        } else {
+            // iPhone 5 y LE
+            [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:26]];
+            [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:26]];
+        }
     } else {
         // iPad
         self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
@@ -121,11 +128,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-// Evitamos la rotacion en esta pantalla concreta
-- (BOOL)shouldAutorotate {
-    return NO;
 }
 
 // Metodo para ocultar el teclado

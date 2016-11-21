@@ -37,8 +37,7 @@
 }
 
 // Propiedades para elementos del interfaz
-@property (nonatomic, retain) NSString *nombre;
-@property (nonatomic, retain) NSString *direccion;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollview;
 @property (nonatomic, retain) IBOutlet UILabel *appNameLabel;
 @property (nonatomic, retain) IBOutlet UITextField *userTextField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;

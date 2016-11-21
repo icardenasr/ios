@@ -49,6 +49,7 @@
 
 @implementation NubeLoginViewController
 
+@synthesize scrollview;
 @synthesize appNameLabel;
 @synthesize userTextField, passwordTextField;
 @synthesize aiview;
@@ -109,6 +110,9 @@
         [self.termsButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:22]];
     }
     
+    // Registro de las notificaciones de mostrar y ocultar el teclado
+    [self registerForKeyboardNotifications];
+    
     // Delegate de los EditText
     [self.userTextField setDelegate:self];
     [self.passwordTextField setDelegate:self];
@@ -135,14 +139,60 @@
     [self.view endEditing:YES];
 }
 
+// Dejamos que esta pantalla unicamente admita rotacion en iPad - En iPhone esta pantalla no rota
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    //return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
-    return YES;
+    if (IS_IPAD) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
-//Only for ios 6
+// Only for ios 6
 - (BOOL)shouldAutorotate {
-    return YES;
+    if (IS_IPAD) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+// Metodo que registra la pantalla actual para escuchar las notificaciones de mostrar y ocultar el teclado
+- (void)registerForKeyboardNotifications {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+}
+
+// Metodo que se ejecuta cuando el teclado es mostrado
+- (void)keyboardWasShown:(NSNotification*)aNotification {
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    scrollview.contentInset = contentInsets;
+    scrollview.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your application might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    if (!CGRectContainsPoint(aRect, userTextField.frame.origin) || !CGRectContainsPoint(aRect, passwordTextField.frame.origin)) {
+        if (IS_IPAD) {
+            //CGPoint scrollPoint = CGPointMake(0.0, userTextField.frame.origin.y-kbSize.height);
+            CGPoint scrollPoint = CGPointMake(0.0, 200.0);
+            [scrollview setContentOffset:scrollPoint animated:YES];
+        }
+    }
+}
+
+// Metodo que se ejecuta cuando el teclado es ocultado
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification {
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    scrollview.contentInset = contentInsets;
+    scrollview.scrollIndicatorInsets = contentInsets;
 }
 
 // Metodo que elimina los espacios en blanco de los extremos de una cadena de texto

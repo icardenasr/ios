@@ -525,8 +525,7 @@ NSString * NotReachableNetworkForDownloadsNotification = @"NotReachableNetworkFo
     if (IS_IPHONE) {
         _settingsViewController = [[NubeSettingsViewController alloc] initWithNibName:@"NubeSettingsViewController_iPhone" bundle:nil];
     } else {
-        // El interfaz de iPad es compuesto, así que utilizamos el mismo diseño del iPhone para iPad
-        _settingsViewController = [[NubeSettingsViewController alloc] initWithNibName:@"NubeSettingsViewController_iPhone" bundle:nil];
+        _settingsViewController = [[NubeSettingsViewController alloc] initWithNibName:@"NubeSettingsViewController_iPad" bundle:nil];
     }
     OCNavigationController *settingsNavigationController = [[OCNavigationController alloc]initWithRootViewController:_settingsViewController];
     

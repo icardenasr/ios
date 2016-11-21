@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -26,26 +25,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="junta.png" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-6a-wDz">
-                    <rect key="frame" x="40" y="80" width="240" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="0xM-6a-wDz" secondAttribute="height" multiplier="15:8" id="N0R-rT-NG1"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplicación corporativa de la" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaD-FO-BwP">
-                    <rect key="frame" x="54" y="222" width="212" height="21"/>
+                    <rect key="frame" x="54" y="70" width="212" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Junta de Andalucía" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o2-rh-hmh">
-                    <rect key="frame" x="8" y="245" width="304" height="21"/>
+                    <rect key="frame" x="8" y="93" width="304" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0v-zH-a3B">
-                    <rect key="frame" x="30" y="384" width="65" height="30"/>
+                    <rect key="frame" x="30" y="390" width="65" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="tintColor" red="0.16702035216992933" green="0.42774460078534027" blue="0.13583135564377893" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="AYUDA">
@@ -56,7 +49,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upr-WM-uO3">
-                    <rect key="frame" x="127" y="281" width="67" height="42"/>
+                    <rect key="frame" x="127" y="129" width="67" height="42"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="tintColor" red="0.84530431939999995" green="0.0" blue="0.0086793016929999998" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="SALIR">
@@ -67,7 +60,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zc8-DD-MdX">
-                    <rect key="frame" x="180" y="384" width="110" height="30"/>
+                    <rect key="frame" x="180" y="390" width="110" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="110" id="fxa-Av-ccn"/>
                         <constraint firstAttribute="height" constant="30" id="kOM-Jd-joa"/>
@@ -82,7 +75,7 @@
                     </connections>
                 </button>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Suh-Gk-ie5">
-                    <rect key="frame" x="226" y="333" width="51" height="31"/>
+                    <rect key="frame" x="226" y="181" width="51" height="31"/>
                     <color key="tintColor" red="0.1670203522" green="0.42774460079999999" blue="0.13583135560000001" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="onTintColor" red="0.1670203522" green="0.42774460079999999" blue="0.13583135560000001" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
@@ -90,7 +83,7 @@
                     </connections>
                 </switch>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código de seguridad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-nE-WUt">
-                    <rect key="frame" x="45" y="338" width="160" height="21"/>
+                    <rect key="frame" x="45" y="186" width="160" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -98,25 +91,21 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="zc8-DD-MdX" secondAttribute="bottom" constant="66" id="0Qo-NV-Ep9"/>
+                <constraint firstAttribute="bottom" secondItem="zc8-DD-MdX" secondAttribute="bottom" constant="60" id="0Qo-NV-Ep9"/>
                 <constraint firstItem="H0v-zH-a3B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="1Ty-mI-Mco"/>
-                <constraint firstItem="0xM-6a-wDz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="9Xr-lP-L0q"/>
-                <constraint firstItem="HaD-FO-BwP" firstAttribute="top" secondItem="0xM-6a-wDz" secondAttribute="bottom" constant="14" id="9q6-wZ-zc3"/>
                 <constraint firstItem="8cd-nE-WUt" firstAttribute="centerY" secondItem="Suh-Gk-ie5" secondAttribute="centerY" id="EH1-45-gVk"/>
                 <constraint firstItem="Upr-WM-uO3" firstAttribute="top" secondItem="8o2-rh-hmh" secondAttribute="bottom" constant="15" id="F3K-ek-j2e"/>
                 <constraint firstItem="8o2-rh-hmh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FWN-8X-0MW"/>
                 <constraint firstItem="zc8-DD-MdX" firstAttribute="firstBaseline" secondItem="H0v-zH-a3B" secondAttribute="baseline" id="Jeu-g7-Y2E"/>
                 <constraint firstItem="zc8-DD-MdX" firstAttribute="baseline" secondItem="H0v-zH-a3B" secondAttribute="firstBaseline" id="Ksl-bO-onj"/>
-                <constraint firstAttribute="trailing" secondItem="0xM-6a-wDz" secondAttribute="trailing" constant="40" id="MKU-Hj-BBz"/>
-                <constraint firstItem="0xM-6a-wDz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="QZZ-kl-Ccg"/>
                 <constraint firstAttribute="trailing" secondItem="Suh-Gk-ie5" secondAttribute="trailing" constant="45" id="Sfc-W1-njI"/>
                 <constraint firstItem="zc8-DD-MdX" firstAttribute="top" secondItem="H0v-zH-a3B" secondAttribute="top" id="Tik-xJ-a9x"/>
-                <constraint firstItem="zc8-DD-MdX" firstAttribute="top" secondItem="8cd-nE-WUt" secondAttribute="bottom" constant="25" id="WWD-0F-HwN"/>
                 <constraint firstItem="HaD-FO-BwP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZIJ-en-aLc"/>
-                <constraint firstItem="0xM-6a-wDz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="atX-19-HDw"/>
+                <constraint firstItem="8cd-nE-WUt" firstAttribute="top" secondItem="Upr-WM-uO3" secondAttribute="bottom" constant="15" id="aq6-Sw-IB6"/>
                 <constraint firstItem="Upr-WM-uO3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="esE-3W-N94"/>
                 <constraint firstItem="8o2-rh-hmh" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="fIw-EO-qOU"/>
                 <constraint firstItem="8o2-rh-hmh" firstAttribute="top" secondItem="HaD-FO-BwP" secondAttribute="bottom" constant="2" id="fyw-BK-cPs"/>
+                <constraint firstItem="HaD-FO-BwP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="70" id="iQm-bV-tW8"/>
                 <constraint firstItem="8cd-nE-WUt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="wne-2b-h1m"/>
                 <constraint firstAttribute="trailing" secondItem="zc8-DD-MdX" secondAttribute="trailing" constant="30" id="xIQ-5X-hZv"/>
             </constraints>
@@ -124,7 +113,4 @@
             <point key="canvasLocation" x="285" y="289"/>
         </view>
     </objects>
-    <resources>
-        <image name="junta.png" width="1479" height="1033"/>
-    </resources>
 </document>
