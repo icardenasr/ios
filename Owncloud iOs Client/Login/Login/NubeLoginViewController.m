@@ -82,7 +82,7 @@
     
     if (IS_IPHONE_6P) {
         // iPhone 6 Plus
-        self.appNameLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:60];
+        self.appNameLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:46];
         self.userTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         self.passwordTextField.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         [self.connectButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:32]];
@@ -144,7 +144,7 @@
     if (IS_IPAD) {
         return YES;
     } else {
-        return NO;
+        return YES;
     }
 }
 
@@ -153,7 +153,7 @@
     if (IS_IPAD) {
         return YES;
     } else {
-        return NO;
+        return YES;
     }
 }
 
@@ -182,6 +182,9 @@
     if (!CGRectContainsPoint(aRect, userTextField.frame.origin) || !CGRectContainsPoint(aRect, passwordTextField.frame.origin)) {
         if (IS_IPAD) {
             //CGPoint scrollPoint = CGPointMake(0.0, userTextField.frame.origin.y-kbSize.height);
+            CGPoint scrollPoint = CGPointMake(0.0, 200.0);
+            [scrollview setContentOffset:scrollPoint animated:YES];
+        } else {
             CGPoint scrollPoint = CGPointMake(0.0, 200.0);
             [scrollview setContentOffset:scrollPoint animated:YES];
         }
