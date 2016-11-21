@@ -135,9 +135,14 @@
     [self.view endEditing:YES];
 }
 
-// Evitamos la rotacion en esta pantalla concreta
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    //return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
+    return YES;
+}
+
+//Only for ios 6
 - (BOOL)shouldAutorotate {
-    return NO;
+    return YES;
 }
 
 // Metodo que elimina los espacios en blanco de los extremos de una cadena de texto

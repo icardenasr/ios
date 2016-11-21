@@ -652,6 +652,7 @@
 		A99C2DFC1D0ADB1200040D9B /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A99C2DFA1D0ADB1200040D9B /* ELCAssetPicker.xib */; };
 		A99C2DFD1D0ADB1200040D9B /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = A99C2DFB1D0ADB1200040D9B /* ELCAssetTablePicker.xib */; };
 		A9BCE2081D0ABC8D0053324B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BCE2071D0ABC8D0053324B /* Launch Screen.storyboard */; };
+		A9E049DA1DE2FF0F00EBDCEE /* NubeSettingsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E049D91DE2FF0F00EBDCEE /* NubeSettingsViewController_iPad.xib */; };
 		A9EAEDC11D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9EAEDC01D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib */; };
 		A9EAEDC51D13C3F500663D78 /* NubeSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EAEDC41D13C3F500663D78 /* NubeSettingsViewController.m */; };
 		A9EAEDC81D13FED600663D78 /* junta.png in Resources */ = {isa = PBXBuildFile; fileRef = A9EAEDC71D13FED500663D78 /* junta.png */; };
@@ -1689,6 +1690,7 @@
 		A99C2DFA1D0ADB1200040D9B /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
 		A99C2DFB1D0ADB1200040D9B /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
 		A9BCE2071D0ABC8D0053324B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A9E049D91DE2FF0F00EBDCEE /* NubeSettingsViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NubeSettingsViewController_iPad.xib; path = Tabs/SettingTab/NubeSettingsViewController_iPad.xib; sourceTree = "<group>"; };
 		A9EAEDC01D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NubeSettingsViewController_iPhone.xib; path = Tabs/SettingTab/NubeSettingsViewController_iPhone.xib; sourceTree = "<group>"; };
 		A9EAEDC31D13C3F500663D78 /* NubeSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NubeSettingsViewController.h; path = Tabs/SettingTab/NubeSettingsViewController.h; sourceTree = "<group>"; };
 		A9EAEDC41D13C3F500663D78 /* NubeSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NubeSettingsViewController.m; path = Tabs/SettingTab/NubeSettingsViewController.m; sourceTree = "<group>"; };
@@ -2143,6 +2145,7 @@
 				A9EAEDC31D13C3F500663D78 /* NubeSettingsViewController.h */,
 				A9EAEDC41D13C3F500663D78 /* NubeSettingsViewController.m */,
 				A9EAEDC01D13C3A200663D78 /* NubeSettingsViewController_iPhone.xib */,
+				A9E049D91DE2FF0F00EBDCEE /* NubeSettingsViewController_iPad.xib */,
 				148DD6E517786A1400FB9977 /* WebViewController.h */,
 				148DD6E617786A1400FB9977 /* WebViewController.m */,
 				148DD6E717786A1400FB9977 /* WebViewController.xib */,
@@ -4283,6 +4286,7 @@
 				13B1DDE318EC1F69006166DC /* sharedItemWhite@2x.png in Resources */,
 				4052B4D81B4ECC75000788DA /* btnAllHelpGrey.png in Resources */,
 				14EC1955195B297F00B02AB6 /* sharedItem.png in Resources */,
+				A9E049DA1DE2FF0F00EBDCEE /* NubeSettingsViewController_iPad.xib in Resources */,
 				1487F269177C35AA004A1A5A /* TSAlertViewMessageListViewShadow.png in Resources */,
 				13A9FCF417E9858C00FF48D7 /* Overlay@2x.png in Resources */,
 				40E354C91A14D6B2000E7FE4 /* openWithTB@3x.png in Resources */,
@@ -5388,8 +5392,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CODE_SIGN_ENTITLEMENTS = "OC Share Sheet/OC Share Sheet.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "Owncloud iOs Client/Owncloud iOs Client-Prefix.pch";
@@ -5417,7 +5421,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b076de29-1c7b-452c-b61c-d540c4ca4aa9";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/OCExtensions-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -5481,8 +5485,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = ownCloudExtApp/ownCloudExtApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
 				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -5519,7 +5523,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-Obj-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "55753221-502d-4762-adb3-90f440833c43";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/OCExtensions-Bridging-Header.h";
 			};
@@ -5596,8 +5600,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = ownCloudExtAppFileProvider/ownCloudExtAppFileProvider.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alberto Diaz Lopez (NM8C76DXWB)";
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
@@ -5628,7 +5632,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0e04ce82-4b09-4a32-bcee-491a5e7d10a2";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Owncloud iOs Client/OCExtensions-Bridging-Header.h";
 			};

@@ -56,36 +56,36 @@
     
     if (IS_IPHONE_6P) {
         // iPhone 6 Plus
-        self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:25]];
-        self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
-        [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
-    } else if (IS_IPHONE_6) {
-        // iPhone 6
-        self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:25]];
-        self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
-        [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
-    } else if (IS_IPHONE) {
-        // iPhone 4 y 5
         self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:32]];
         self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
         [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:28]];
         [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:28]];
+    } else if (IS_IPHONE_6) {
+        // iPhone 6
+        self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:32]];
+        self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:28]];
+        [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:28]];
+    } else if (IS_IPHONE) {
+        // iPhone 4 y 5
+        self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:30]];
+        self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:26]];
+        [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:26]];
     } else {
         // iPad
-        self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:25]];
-        self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:17];
-        [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
-        [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:20]];
+        self.desc1Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        self.desc2Label.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        [self.logoutButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:32]];
+        self.passcodeLabel.font = [UIFont fontWithName:@"NewsGotT-Regu" size:20];
+        [self.helpButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:28]];
+        [self.supportButton.titleLabel setFont:[UIFont fontWithName:@"NewsGotT-Regu" size:28]];
     }
     
 }
@@ -172,9 +172,12 @@
         [self presentViewController:oc animated:YES completion:nil];
     } else {
         //is ipad
-        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+        // Comentamos el que salga en una ventana para que salga a toda pantalla y se ejecute el metodo viewDidAppear
+        /*AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
         oc.modalPresentationStyle = UIModalPresentationFormSheet;
-        [app.splitViewController presentViewController:oc animated:YES completion:nil];
+        [app.splitViewController presentViewController:oc animated:YES completion:nil];*/
+        // Lo sacamos como en iPhone para que salga a toda pantalla
+        [self presentViewController:oc animated:YES completion:nil];
     }
 }
 
@@ -182,9 +185,9 @@
 -(IBAction)showDisconnectActionSheet:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"¿Deseas salir?"
                                                              delegate:self
-                                                    cancelButtonTitle:@"Cancelar"
+                                                    cancelButtonTitle:nil
                                                destructiveButtonTitle:@"Salir"
-                                                    otherButtonTitles:nil];
+                                                    otherButtonTitles:@"Cancelar", nil];
     [actionSheet showInView:self.view];
     actionSheet.tag = 100;
 }
