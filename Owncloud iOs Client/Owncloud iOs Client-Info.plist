@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Nube Junta</string>
+	<string>Ficheros Junta</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
