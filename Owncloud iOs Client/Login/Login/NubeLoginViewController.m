@@ -39,7 +39,8 @@
 #define k_remove_to_contains_path @"/index.php/apps/"
 
 // Constantes para las URLs del servicio
-#define kOwncloudUrl @"http://10.240.240.18/owncloud/"
+//#define kOwncloudUrl @"http://10.240.240.18/owncloud/"
+#define kOwncloudUrl @"https://ficheros.juntadeandalucia.es/"
 #define kTermsUrl @"https://correo.juntadeandalucia.es/ayuda/index.html#/term_nube"
 
 
@@ -521,8 +522,8 @@
     DLog(@"Error login");
     isErrorOnCredentials = YES;
     // Mostramos el error
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Credenciales incorrectas"
-                                                   message: @"Introduzca su usuario (sin @juntadeandalucia.es) y contraseña del Correo Corporativo"
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle: @"Error de autenticación"
+                                                   message: @"El usuario o la contraseña son incorrectos, o el usuario no tiene la cuenta activada en Ficheros Junta. Para solicitar la activación diríjase al responsable de informática de su organismo"
                                                   delegate: self
                                          cancelButtonTitle:NSLocalizedString(@"ok", nil)
                                          otherButtonTitles:nil,nil];
