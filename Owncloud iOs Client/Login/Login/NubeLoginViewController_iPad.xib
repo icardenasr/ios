@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -23,6 +24,13 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jda_eu.png" translatesAutoresizingMaskIntoConstraints="NO" id="qal-w5-ODo">
+                    <rect key="frame" x="179" y="913" width="409" height="87"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="87" id="LvT-Cf-jcH"/>
+                        <constraint firstAttribute="width" secondItem="qal-w5-ODo" secondAttribute="height" multiplier="409:87" id="dZP-vJ-I8v"/>
+                    </constraints>
+                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UE2-0j-HLn">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                     <subviews>
@@ -112,9 +120,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="qal-w5-ODo" secondAttribute="bottom" constant="24" id="1QO-jB-rde"/>
                 <constraint firstAttribute="bottomMargin" secondItem="UE2-0j-HLn" secondAttribute="bottom" id="65N-iH-6gU"/>
                 <constraint firstAttribute="trailingMargin" secondItem="UE2-0j-HLn" secondAttribute="trailing" id="7rY-dt-rJ8"/>
                 <constraint firstItem="UE2-0j-HLn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="ckD-e7-RE3"/>
+                <constraint firstItem="qal-w5-ODo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jJ2-qc-Foj"/>
                 <constraint firstItem="UE2-0j-HLn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="rVu-sI-DZZ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -122,6 +132,7 @@
         </view>
     </objects>
     <resources>
+        <image name="jda_eu.png" width="1120" height="239"/>
         <image name="nube-junta-verde.png" width="1017" height="545"/>
     </resources>
 </document>

@@ -645,6 +645,7 @@
 		A944FB4B1D101D6D0042BEE3 /* texgyreheroscn-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A944FB421D101D6D0042BEE3 /* texgyreheroscn-italic.otf */; };
 		A944FB4C1D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A944FB431D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf */; };
 		A9736A0E1D1005AF005BBAE0 /* nube-junta-verde.png in Resources */ = {isa = PBXBuildFile; fileRef = A9736A0D1D1005AF005BBAE0 /* nube-junta-verde.png */; };
+		A99798991F9E43F6000C6F83 /* jda_eu.png in Resources */ = {isa = PBXBuildFile; fileRef = A99798981F9E43F6000C6F83 /* jda_eu.png */; };
 		A99C2DED1D0ADAA500040D9B /* InstantUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C2DEC1D0ADAA500040D9B /* InstantUpload.m */; };
 		A99C2DF71D0ADAFD00040D9B /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C2DF01D0ADAFC00040D9B /* ELCAssetTablePicker.m */; };
 		A99C2DF81D0ADAFD00040D9B /* ELCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A99C2DF21D0ADAFC00040D9B /* ELCConsole.m */; };
@@ -1676,6 +1677,7 @@
 		A944FB421D101D6D0042BEE3 /* texgyreheroscn-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreheroscn-italic.otf"; sourceTree = "<group>"; };
 		A944FB431D101D6D0042BEE3 /* texgyreheroscn-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "texgyreheroscn-regular-webfont.ttf"; sourceTree = "<group>"; };
 		A9736A0D1D1005AF005BBAE0 /* nube-junta-verde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nube-junta-verde.png"; sourceTree = "<group>"; };
+		A99798981F9E43F6000C6F83 /* jda_eu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jda_eu.png; sourceTree = "<group>"; };
 		A99C2DEB1D0ADA9E00040D9B /* InstantUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstantUpload.h; sourceTree = "<group>"; };
 		A99C2DEC1D0ADAA500040D9B /* InstantUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstantUpload.m; sourceTree = "<group>"; };
 		A99C2DEE1D0ADAFC00040D9B /* ELCAssetPickerFilterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELCAssetPickerFilterDelegate.h; path = ExternalLibreries/ELCPickerLib/ELCAssetPickerFilterDelegate.h; sourceTree = "<group>"; };
@@ -3320,6 +3322,7 @@
 		59F470341C5F9AF4005B6091 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A99798981F9E43F6000C6F83 /* jda_eu.png */,
 				A93174FC1D117833001BDBFF /* nube-junta-verde-fake-splash.png */,
 				593D14881C60BE1E005161E2 /* SplashImage.png */,
 			);
@@ -4155,6 +4158,7 @@
 				1487F22A177C35AA004A1A5A /* image_icon@2x~ipad.png in Resources */,
 				13B1DDE218EC1F69006166DC /* sharedItemWhite.png in Resources */,
 				4030D8F11A16275900DB0871 /* file_icon~ipad.png in Resources */,
+				A99798991F9E43F6000C6F83 /* jda_eu.png in Resources */,
 				14A4796F18EC708D003500BA /* FileFavoriteUpdatingIcon@2x.png in Resources */,
 				14A87AE01933390900D0D5AD /* FileDownloadingIcon@2x.png in Resources */,
 				14A32BBE18DC46CE0084CDCC /* FileOverwritingIcon.png in Resources */,

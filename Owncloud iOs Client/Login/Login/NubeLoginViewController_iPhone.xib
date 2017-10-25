@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -23,38 +23,45 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jda_eu.png" translatesAutoresizingMaskIntoConstraints="NO" id="pvk-Gv-CkD">
+                    <rect key="frame" x="40" y="417" width="240" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="pvk-Gv-CkD" secondAttribute="height" multiplier="240:53" id="YOp-ev-gcK"/>
+                        <constraint firstAttribute="height" constant="53" id="dFb-8a-YnA"/>
+                    </constraints>
+                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOw-oI-3wl">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nube-junta-verde.png" translatesAutoresizingMaskIntoConstraints="NO" id="hPc-Je-64v">
-                            <rect key="frame" x="40" y="34" width="240" height="128"/>
+                            <rect key="frame" x="40" y="22" width="240" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="128" id="VEL-Kl-xmZ"/>
                                 <constraint firstAttribute="width" secondItem="hPc-Je-64v" secondAttribute="height" multiplier="15:8" id="mEK-OQ-5dZ"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ficheros Junta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giu-SQ-7Jr">
-                            <rect key="frame" x="8" y="170" width="304" height="44"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ficheros Junta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giu-SQ-7Jr">
+                            <rect key="frame" x="8" y="152" width="304" height="34"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="Giu-SQ-7Jr" secondAttribute="height" multiplier="164:30" id="XPJ-SL-OfX"/>
+                                <constraint firstAttribute="width" secondItem="Giu-SQ-7Jr" secondAttribute="height" multiplier="164:30" constant="118.13333333333333" id="XPJ-SL-OfX"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcm-Wb-kOY">
-                            <rect key="frame" x="40" y="240" width="240" height="30"/>
+                            <rect key="frame" x="40" y="212" width="240" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                         </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-UC-Ii9">
-                            <rect key="frame" x="40" y="285" width="240" height="30"/>
+                            <rect key="frame" x="40" y="257" width="240" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe4-Zq-5dw">
-                            <rect key="frame" x="108" y="330" width="104" height="36"/>
+                            <rect key="frame" x="108" y="302" width="104" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="tintColor" red="0.16702035216992933" green="0.42774460078534027" blue="0.13583135564377893" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="CONECTAR">
@@ -65,10 +72,10 @@
                             </connections>
                         </button>
                         <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bWH-F9-ebn">
-                            <rect key="frame" x="150" y="381" width="20" height="20"/>
+                            <rect key="frame" x="150" y="348" width="20" height="20"/>
                         </activityIndicatorView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oni-KC-fFZ">
-                            <rect key="frame" x="88" y="425" width="143" height="30"/>
+                            <rect key="frame" x="89" y="376" width="143" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="IwU-mm-cU3"/>
                             </constraints>
@@ -83,23 +90,23 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="hPc-Je-64v" secondAttribute="bottom" constant="318" id="0UW-WV-A3h"/>
-                        <constraint firstItem="Giu-SQ-7Jr" firstAttribute="top" secondItem="hPc-Je-64v" secondAttribute="bottom" constant="8" id="4bX-Dh-B3e"/>
+                        <constraint firstAttribute="bottom" secondItem="hPc-Je-64v" secondAttribute="bottom" constant="330" id="0UW-WV-A3h"/>
+                        <constraint firstItem="Giu-SQ-7Jr" firstAttribute="top" secondItem="hPc-Je-64v" secondAttribute="bottom" constant="2" id="4bX-Dh-B3e"/>
                         <constraint firstItem="p8S-UC-Ii9" firstAttribute="top" secondItem="fcm-Wb-kOY" secondAttribute="bottom" constant="15" id="99A-To-Fxv"/>
+                        <constraint firstItem="oni-KC-fFZ" firstAttribute="top" secondItem="bWH-F9-ebn" secondAttribute="bottom" constant="8" id="9cw-Jh-E9n"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="trailing" secondItem="fcm-Wb-kOY" secondAttribute="trailing" id="E82-MG-rKX"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="oni-KC-fFZ" secondAttribute="centerX" id="EHI-hD-Pvw"/>
-                        <constraint firstItem="hPc-Je-64v" firstAttribute="top" secondItem="kOw-oI-3wl" secondAttribute="top" constant="34" id="Gqv-6B-tmd"/>
-                        <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="Giu-SQ-7Jr" secondAttribute="leading" id="Il6-qk-Y8q"/>
+                        <constraint firstItem="hPc-Je-64v" firstAttribute="top" secondItem="kOw-oI-3wl" secondAttribute="top" constant="22" id="Gqv-6B-tmd"/>
+                        <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="Giu-SQ-7Jr" secondAttribute="leading" constant="32" id="Il6-qk-Y8q"/>
                         <constraint firstAttribute="trailing" secondItem="hPc-Je-64v" secondAttribute="trailing" constant="40" id="KhF-Bj-pdi"/>
                         <constraint firstItem="fcm-Wb-kOY" firstAttribute="top" secondItem="Giu-SQ-7Jr" secondAttribute="bottom" constant="26" id="Kr7-G3-tnd"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="trailing" secondItem="p8S-UC-Ii9" secondAttribute="trailing" id="OJL-LL-pdD"/>
-                        <constraint firstItem="bWH-F9-ebn" firstAttribute="top" secondItem="Pe4-Zq-5dw" secondAttribute="bottom" constant="15" id="OPv-MY-hpC"/>
-                        <constraint firstAttribute="bottom" secondItem="oni-KC-fFZ" secondAttribute="bottom" constant="25" id="PoE-jb-yPq"/>
+                        <constraint firstItem="bWH-F9-ebn" firstAttribute="top" secondItem="Pe4-Zq-5dw" secondAttribute="bottom" constant="10" id="OPv-MY-hpC"/>
                         <constraint firstItem="Pe4-Zq-5dw" firstAttribute="top" secondItem="p8S-UC-Ii9" secondAttribute="bottom" constant="15" id="SzF-Zm-uXv"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="kOw-oI-3wl" secondAttribute="centerX" id="TB5-co-fEU"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="Pe4-Zq-5dw" secondAttribute="centerX" id="cbZ-gh-zbO"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="centerX" secondItem="bWH-F9-ebn" secondAttribute="centerX" id="eQB-et-e2b"/>
-                        <constraint firstItem="hPc-Je-64v" firstAttribute="trailing" secondItem="Giu-SQ-7Jr" secondAttribute="trailing" id="giU-Mq-pjJ"/>
+                        <constraint firstItem="hPc-Je-64v" firstAttribute="trailing" secondItem="Giu-SQ-7Jr" secondAttribute="trailing" constant="-32" id="giU-Mq-pjJ"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="p8S-UC-Ii9" secondAttribute="leading" id="kh9-qi-6wQ"/>
                         <constraint firstItem="hPc-Je-64v" firstAttribute="leading" secondItem="fcm-Wb-kOY" secondAttribute="leading" id="oYN-Nq-VOC"/>
                     </constraints>
@@ -107,8 +114,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="pvk-Gv-CkD" secondAttribute="bottom" constant="10" id="IfS-LY-fFZ"/>
                 <constraint firstAttribute="trailing" secondItem="kOw-oI-3wl" secondAttribute="trailing" id="PKb-Ao-Geh"/>
                 <constraint firstItem="kOw-oI-3wl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Phv-fY-5r0"/>
+                <constraint firstItem="pvk-Gv-CkD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YWz-85-dDh"/>
                 <constraint firstItem="kOw-oI-3wl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fot-NU-Hpi"/>
                 <constraint firstAttribute="bottom" secondItem="kOw-oI-3wl" secondAttribute="bottom" id="rls-XD-NcL"/>
             </constraints>
@@ -117,6 +126,7 @@
         </view>
     </objects>
     <resources>
+        <image name="jda_eu.png" width="1120" height="239"/>
         <image name="nube-junta-verde.png" width="1017" height="545"/>
     </resources>
 </document>
